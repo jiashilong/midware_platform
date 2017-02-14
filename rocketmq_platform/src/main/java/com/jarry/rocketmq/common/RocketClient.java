@@ -6,10 +6,12 @@ package com.jarry.rocketmq.common;
 public abstract class RocketClient {
     protected String host;
     protected int port;
+    protected String topic;
 
     public RocketClient() {
-        this.host = "0.0.0.0";
+        this.host = "localhost";
         this.port = 9876;
+        this.topic = "default";
     }
 
     public RocketClient(String host, int port) {
